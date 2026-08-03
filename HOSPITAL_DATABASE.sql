@@ -1,8 +1,5 @@
 SET SERVEROUTPUT ON;
 
---==========================================================================
--- CLEANUP BLOCK (Prevents ORA-00955 Errors)
---==========================================================================
 BEGIN
     FOR t IN (SELECT table_name FROM user_tables WHERE table_name IN (
         'PRESCRIPTION_REFILLS', 'APPOINTMENT_HISTORY', 'BILLING', 'PRESCRIPTIONS', 
